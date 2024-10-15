@@ -1,0 +1,12 @@
+[Unit]
+Description=Ayollik kodi
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/home/ariza_bot/
+VIRTUAL_ENV=/home/ariza_bot/venv
+Environment=PATH=$VIRTUAL_ENV/bin:$PATH
+ExecStart=/home/ariza_bot/venv/bin/python /home/ariza_bot/bot.py
+[Install]
+WantedBY=multi-user.target
